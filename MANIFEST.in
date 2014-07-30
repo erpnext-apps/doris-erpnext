@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include doris_erpnext *.css
+recursive-include doris_erpnext *.csv
+recursive-include doris_erpnext *.html
+recursive-include doris_erpnext *.ico
+recursive-include doris_erpnext *.js
+recursive-include doris_erpnext *.json
+recursive-include doris_erpnext *.md
+recursive-include doris_erpnext *.png
+recursive-include doris_erpnext *.py
+recursive-include doris_erpnext *.svg
+recursive-include doris_erpnext *.txt
+recursive-exclude doris_erpnext *.pyc
