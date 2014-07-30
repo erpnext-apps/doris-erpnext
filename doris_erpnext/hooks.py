@@ -8,6 +8,16 @@ app_email = "anand@erpnext.com"
 app_url = "https://github.com/frappe-apps/doris-erpnext"
 app_version = "0.0.1"
 
+doc_events = {
+	"Leave Application": {
+		"validate": "doris_erpnext.doris_erpnext_extensions.leave_application.validate_leave_application"
+	}
+}
+
+override_whitelisted_methods = {
+	"erpnext.hr.doctype.leave_application.leave_application.get_events": "doris_erpnext.doris_erpnext_extensions.leave_application.get_events"
+}
+
 # Includes in <head>
 # ------------------
 
