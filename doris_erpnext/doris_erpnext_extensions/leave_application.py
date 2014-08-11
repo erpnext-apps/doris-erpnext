@@ -71,7 +71,7 @@ def get_events(start, end):
 	# get results from standard method
 	events = get_leave_application_events(start, end)
 
-	add_additional_department_leaves(events)
+	add_additional_department_leaves(events, start, end)
 
 	return events
 
