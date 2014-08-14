@@ -83,12 +83,12 @@ def add_additional_department_leaves(events, start, end):
 		return
 
 	departments = get_user_permissions().get("Department", [])
-	if not departments:
-		return
-
-	if employee.department and employee.department in departments:
+	if employee.department and employee.department in (departments or []):
 		# since leaves for this department are already added by the standard method
 		departments.remove(employee.department)
+
+	if not departments:
+		return
 
 	department_employees = frappe.db.sql_list("""select name from `tabEmployee`
 		where company=%s and department in ({0})""".format(", ".join(["%s"] * len(departments))),
