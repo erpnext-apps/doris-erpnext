@@ -15,7 +15,7 @@ frappe.query_reports["Leave Balance"] = {
 			"label": "Company",
 			"fieldtype": "Link",
 			"options": "Company",
-			"default": frappe.defaults.get_user_default("company")
+			"default": frappe.defaults.get_user_default("Company") || frappe.defaults.get_global_default("company")
 		},
 		    {
 			"fieldname":"status",
